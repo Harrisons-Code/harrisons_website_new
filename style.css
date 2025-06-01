@@ -44,6 +44,11 @@ img {
 
 .hero-img {
     max-width: 80%; /* Adjust size for the hero image on the index page */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.hero-img:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
 }
 
 .about-img {
@@ -85,7 +90,7 @@ footer a:hover {
 
 a {
     color: #cccccc; /* Light grey text for links */
-    text-decoration: none; /* Remove underline by default */
+    text-decoration: underline; /* Add underline by default */
     transition: color 0.3s ease; /* Smooth transition for color change */
 }
 a:visited {
@@ -119,4 +124,84 @@ a:hover {
     max-width: 960px; /* Set a maximum width for content */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Add padding inside the container */
+}
+
+.site-header {
+    background-color: #282828; /* Dark background for header */
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+.site-header nav a {
+    color: #cccccc; /* Light grey color for header links */
+    text-decoration: none;
+    margin: 0 15px; /* Increase space between header links */
+    font-size: 1.1em; /* Slightly larger font size for header links */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and underline */
+}
+
+.site-header nav a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline;
+}
+
+.newsletter-signup {
+    background-color: #282828; /* Dark background for the signup section */
+    padding: 30px;
+    margin: 40px auto; /* Center the block and add space above/below */
+    max-width: 600px; /* Limit the width */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+}
+
+.newsletter-signup h3 {
+    color: #ffffff; /* White color for heading */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.newsletter-signup p {
+    color: #cccccc; /* Light grey text */
+    margin-bottom: 20px;
+}
+
+.newsletter-signup form {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 10px;
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3a3a3a; /* Darker background for input */
+    color: #cccccc; /* Light grey text */
+    flex-grow: 1; /* Allow input to grow */
+    max-width: 300px;
+}
+
+.newsletter-signup button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555; /* Dark grey button */
+    color: #ffffff; /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.newsletter-signup button[type="submit"]:hover {
+    background-color: #777; /* Lighter grey on hover */
+}
+
+/* Add hover effect to general images within the container */
+.container img {
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.container img:hover {
+    transform: scale(1.03); /* Scale up slightly on hover */
 } 
