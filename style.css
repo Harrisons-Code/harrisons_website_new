@@ -196,25 +196,25 @@ a:focus {
 .newsletter-signup form {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Space between input and button */
+    gap: 15px; /* Increased gap between input and button */
     margin-bottom: 10px;
 }
 
 .newsletter-signup input[type="email"] {
-    padding: 10px;
+    padding: 12px 15px; /* Adjusted padding */
     border: none;
     border-radius: 4px;
-    background-color: #3a3a3a; /* Darker background for input */
-    color: #cccccc; /* Light grey text */
+    background-color: #444; /* Adjusted background to match screenshot */
+    color: #eee; /* Adjusted text color */
     flex-grow: 1; /* Allow input to grow */
-    max-width: 300px;
+    max-width: 300px; /* Keep a max-width but allow flexing */
 }
 
 .newsletter-signup button[type="submit"] {
-    padding: 10px 20px;
+    padding: 12px 20px; /* Adjusted padding */
     border: none;
     border-radius: 4px;
-    background-color: #555; /* Dark grey button */
+    background-color: #666; /* Adjusted background to match screenshot */
     color: #ffffff; /* White text */
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth transition for hover */
