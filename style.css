@@ -1,29 +1,31 @@
 body {
     background-color: #1e1e1e; /* Dark background */
     color: #cccccc; /* Light grey text */
-    font-family: sans-serif; /* Modern font */
+    font-family: 'Roboto', sans-serif; /* Use a modern sans-serif font, include a fallback */
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
     line-height: 1.6; /* Improve readability with more line spacing */
+    /* text-align: center; /* Center inline and inline-block elements within the body */ */
 }
 
 h1 {
     text-align: center;
     font-size: 3em; /* Adjust heading size */
     color: #ffffff; /* White color for heading */
+    margin-top: 40px; /* Add more space above h1 */
     margin-bottom: 30px; /* Add space below heading */
 }
 
 h2 {
     color: #ffffff; /* White color for subheadings */
-    margin-top: 30px; /* Add space above subheadings */
-    margin-bottom: 15px; /* Add space below subheadings */
+    margin-top: 35px; /* Add more space above subheadings */
+    margin-bottom: 18px; /* Adjust space below subheadings */
 }
 
 h3 {
     color: #ffffff; /* White color for smaller headings */
-    margin-top: 25px; /* Add space above smaller headings */
-    margin-bottom: 10px; /* Add space below smaller headings */
+    margin-top: 30px; /* Adjust space above smaller headings */
+    margin-bottom: 15px; /* Adjust space below smaller headings */
 }
 
 p {
@@ -98,7 +100,11 @@ a:visited {
 }
 a:hover {
     color: #ffffff; /* White color on hover */
-    text-decoration: underline; /* Underline on hover */
+}
+
+a:focus {
+    outline: 2px solid #ffffff; /* White outline for focus */
+    outline-offset: 2px;
 }
 
 .quote-container {
@@ -128,14 +134,31 @@ a:hover {
 
 .site-header {
     background-color: #282828; /* Dark background for header */
-    padding: 10px 20px;
-    text-align: center;
-    margin-bottom: 20px; /* Add space below the header */
+    padding: 15px 30px; /* Increase padding */
+    /* text-align: center; */ /* Remove text-align from header */
+    /* margin-top: 20px; /* Add top margin */ */
+    /* margin-bottom: 20px; /* Add bottom margin */ */
+    /* max-width: 960px; /* Align with container width */ */
+    width: fit-content; /* Make width fit content */
+    /* display: inline-block; /* Make the header an inline-block element to fit content */ */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    box-sizing: border-box; /* Include padding in the element's total width */
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    margin: 20px auto; /* Center the header horizontally and add vertical space */
+}
+
+.site-header nav {
+    /* display: inline-block; /* Allow the nav to shrink to content width */ */
+    /* text-align: center; /* Center the links within the nav */ */
+    /* Remove these rules as flexbox on header handles centering */
+    /* width: fit-content; /* Make the nav width fit its content */ */
 }
 
 .site-header nav a {
     color: #cccccc; /* Light grey color for header links */
-    text-decoration: none;
+    text-decoration: none; /* Remove underline for header links */
     margin: 0 15px; /* Increase space between header links */
     font-size: 1.1em; /* Slightly larger font size for header links */
     transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and underline */
@@ -143,7 +166,12 @@ a:hover {
 
 .site-header nav a:hover {
     color: #ffffff; /* White color on hover */
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover */
+}
+
+.site-header nav a:focus {
+    outline: none; /* Remove outline on focus */
+    text-decoration: underline; /* Add underline on focus for visibility */
 }
 
 .newsletter-signup {
@@ -153,6 +181,7 @@ a:hover {
     max-width: 600px; /* Limit the width */
     border-radius: 8px; /* Rounded corners */
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for the signup box */
 }
 
 .newsletter-signup h3 {
@@ -199,9 +228,67 @@ a:hover {
 
 /* Add hover effect to general images within the container */
 .container img {
-    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth scaling and shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for general images */
 }
 
 .container img:hover {
     transform: scale(1.03); /* Scale up slightly on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+.blog-post-box {
+    background-color: #282828; /* Dark background for blog post boxes */
+    padding: 15px;
+    margin-bottom: 20px; /* Space between blog post boxes */
+    border: 1px solid #3a3a3a; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for boxes */
+}
+
+.blog-post-box:hover {
+    transform: translateY(-5px); /* Slight upward lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+}
+
+.blog-post-box h4 a {
+    color: #ffffff; /* White color for blog post titles */
+    text-decoration: none; /* Remove underline from title links */
+}
+
+.blog-post-box h4 a:hover {
+    text-decoration: underline; /* Add underline on hover for title links */
+}
+
+.blog-post-box p {
+    color: #cccccc; /* Light grey color for preview text */
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Style for the 'Read more ->' link within the box */
+.blog-post-box a {
+    display: inline-block; /* Allows margin and padding */
+    margin-top: 10px; /* Space above the link */
+    color: #cccccc; /* Light grey color */
+    text-decoration: underline;
+}
+
+.blog-post-box a:hover {
+    color: #ffffff; /* White color on hover */
+}
+
+/* Style for horizontal rules */
+hr {
+    border: none;
+    height: 1px;
+    background-color: #3a3a3a; /* Dark grey color for dividers */
+    margin: 40px 0; /* Space above and below the divider */
+}
+
+/* Style for the placeholder lines in blog posts */
+p br {
+    display: block;
+    margin-bottom: 10px; /* Add some space for line breaks */
 } 
