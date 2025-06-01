@@ -1,0 +1,122 @@
+body {
+    background-color: #1e1e1e; /* Dark background */
+    color: #cccccc; /* Light grey text */
+    font-family: sans-serif; /* Modern font */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    line-height: 1.6; /* Improve readability with more line spacing */
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em; /* Adjust heading size */
+    color: #ffffff; /* White color for heading */
+    margin-bottom: 30px; /* Add space below heading */
+}
+
+h2 {
+    color: #ffffff; /* White color for subheadings */
+    margin-top: 30px; /* Add space above subheadings */
+    margin-bottom: 15px; /* Add space below subheadings */
+}
+
+h3 {
+    color: #ffffff; /* White color for smaller headings */
+    margin-top: 25px; /* Add space above smaller headings */
+    margin-bottom: 10px; /* Add space below smaller headings */
+}
+
+p {
+    margin-bottom: 15px; /* Add space below paragraphs */
+}
+
+img {
+    display: block;
+    margin: 20px auto; /* Add margin above and below image */
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 8px; /* Slightly rounded corners for images */
+}
+
+.wallpaper-img {
+    max-width: 60%; /* Adjust size for wallpaper images */
+}
+
+.hero-img {
+    max-width: 80%; /* Adjust size for the hero image on the index page */
+}
+
+.about-img {
+    max-width: 50%; /* Adjust size for the profile picture on the about page */
+}
+
+.stuff-category {
+    margin-bottom: 30px; /* Space below each category */
+}
+
+.stuff-list {
+    list-style: none; /* Remove default list bullets */
+    padding: 0; /* Remove default list padding */
+}
+
+.stuff-list li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+footer {
+    text-align: center;
+    font-size: 1em; /* Adjust footer font size */
+    margin-top: 40px; /* Add more space above footer */
+    padding-top: 20px; /* Add padding above footer content */
+    border-top: 1px solid #333; /* Add a subtle line above footer */
+}
+
+footer a {
+    color: #cccccc; /* Light grey color for footer links */
+    text-decoration: none;
+    margin: 0 10px; /* Add space between footer links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+footer a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline;
+}
+
+a {
+    color: #cccccc; /* Light grey text for links */
+    text-decoration: none; /* Remove underline by default */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+a:visited {
+    color: #cccccc; /* Same color for visited links */
+}
+a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.quote-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem; /* Increase padding */
+    text-align: center;
+    font-style: italic;
+    background-color: #282828; /* Slightly lighter background for quote block */
+    border-left: 5px solid #555; /* Add a left border as a design element */
+    border-radius: 8px; /* Rounded corners */
+}
+.quote-text {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem; /* Adjust spacing */
+}
+.quote-author {
+    font-size: 1rem;
+    color: #aaaaaa; /* Lighter grey for dark theme */
+}
+
+.container {
+    max-width: 960px; /* Set a maximum width for content */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding inside the container */
+} 
