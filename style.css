@@ -289,4 +289,50 @@ hr {
 p br {
     display: block;
     margin-bottom: 10px; /* Add some space for line breaks */
+}
+
+/* Styles for the Subscription Success Popup */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black with opacity */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    /* Use flexbox to center content */
+    display: flex;
+}
+
+.popup-content {
+    background-color: #282828; /* Dark background */
+    margin: auto; /* Auto margin */
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    width: 80%; /* Could be responsive */
+    max-width: 500px; /* Max width */
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of close button */
+}
+
+.close-button {
+    color: #aaaaaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
 } 
