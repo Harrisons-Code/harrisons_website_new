@@ -1,0 +1,207 @@
+body {
+    background-color: #1e1e1e; /* Dark background */
+    color: #cccccc; /* Light grey text */
+    font-family: sans-serif; /* Modern font */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    line-height: 1.6; /* Improve readability with more line spacing */
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em; /* Adjust heading size */
+    color: #ffffff; /* White color for heading */
+    margin-bottom: 30px; /* Add space below heading */
+}
+
+h2 {
+    color: #ffffff; /* White color for subheadings */
+    margin-top: 30px; /* Add space above subheadings */
+    margin-bottom: 15px; /* Add space below subheadings */
+}
+
+h3 {
+    color: #ffffff; /* White color for smaller headings */
+    margin-top: 25px; /* Add space above smaller headings */
+    margin-bottom: 10px; /* Add space below smaller headings */
+}
+
+p {
+    margin-bottom: 15px; /* Add space below paragraphs */
+}
+
+img {
+    display: block;
+    margin: 20px auto; /* Add margin above and below image */
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 8px; /* Slightly rounded corners for images */
+}
+
+.wallpaper-img {
+    max-width: 60%; /* Adjust size for wallpaper images */
+}
+
+.hero-img {
+    max-width: 80%; /* Adjust size for the hero image on the index page */
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.hero-img:hover {
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+.about-img {
+    max-width: 50%; /* Adjust size for the profile picture on the about page */
+}
+
+.stuff-category {
+    margin-bottom: 30px; /* Space below each category */
+}
+
+.stuff-list {
+    list-style: none; /* Remove default list bullets */
+    padding: 0; /* Remove default list padding */
+}
+
+.stuff-list li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+footer {
+    text-align: center;
+    font-size: 1em; /* Adjust footer font size */
+    margin-top: 40px; /* Add more space above footer */
+    padding-top: 20px; /* Add padding above footer content */
+    border-top: 1px solid #333; /* Add a subtle line above footer */
+}
+
+footer a {
+    color: #cccccc; /* Light grey color for footer links */
+    text-decoration: none;
+    margin: 0 10px; /* Add space between footer links */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+footer a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline;
+}
+
+a {
+    color: #cccccc; /* Light grey text for links */
+    text-decoration: underline; /* Add underline by default */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+a:visited {
+    color: #cccccc; /* Same color for visited links */
+}
+a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.quote-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem; /* Increase padding */
+    text-align: center;
+    font-style: italic;
+    background-color: #282828; /* Slightly lighter background for quote block */
+    border-left: 5px solid #555; /* Add a left border as a design element */
+    border-radius: 8px; /* Rounded corners */
+}
+.quote-text {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem; /* Adjust spacing */
+}
+.quote-author {
+    font-size: 1rem;
+    color: #aaaaaa; /* Lighter grey for dark theme */
+}
+
+.container {
+    max-width: 960px; /* Set a maximum width for content */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding inside the container */
+}
+
+.site-header {
+    background-color: #282828; /* Dark background for header */
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+.site-header nav a {
+    color: #cccccc; /* Light grey color for header links */
+    text-decoration: none;
+    margin: 0 15px; /* Increase space between header links */
+    font-size: 1.1em; /* Slightly larger font size for header links */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for color and underline */
+}
+
+.site-header nav a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline;
+}
+
+.newsletter-signup {
+    background-color: #282828; /* Dark background for the signup section */
+    padding: 30px;
+    margin: 40px auto; /* Center the block and add space above/below */
+    max-width: 600px; /* Limit the width */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center;
+}
+
+.newsletter-signup h3 {
+    color: #ffffff; /* White color for heading */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.newsletter-signup p {
+    color: #cccccc; /* Light grey text */
+    margin-bottom: 20px;
+}
+
+.newsletter-signup form {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 10px;
+}
+
+.newsletter-signup input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #3a3a3a; /* Darker background for input */
+    color: #cccccc; /* Light grey text */
+    flex-grow: 1; /* Allow input to grow */
+    max-width: 300px;
+}
+
+.newsletter-signup button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #555; /* Dark grey button */
+    color: #ffffff; /* White text */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.newsletter-signup button[type="submit"]:hover {
+    background-color: #777; /* Lighter grey on hover */
+}
+
+/* Add hover effect to general images within the container */
+.container img {
+    transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.container img:hover {
+    transform: scale(1.03); /* Scale up slightly on hover */
+} 
