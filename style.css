@@ -54,7 +54,21 @@ img {
 }
 
 .about-img {
-    max-width: 50%; /* Adjust size for the profile picture on the about page */
+    max-width: 30%; /* Adjust size for the profile picture on the about page */
+}
+
+/* Styles for the about page content layout */
+.about-content {
+    display: flex; /* Arrange children side-by-side */
+    align-items: center; /* Vertically align image and text */
+    gap: 30px; /* Add space between the image and the paragraph */
+    margin-top: 20px; /* Add some space below the header */
+}
+
+.about-content p {
+    font-size: 1.4em; /* Increase text size */
+    margin-bottom: 0; /* Remove default paragraph bottom margin in flex container */
+    flex-grow: 1; /* Allow paragraph to take up remaining space */
 }
 
 .stuff-category {
