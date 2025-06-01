@@ -103,8 +103,10 @@ a:hover {
 }
 
 a:focus {
-    outline: 2px solid #ffffff; /* White outline for focus */
-    outline-offset: 2px;
+    /* outline: 2px solid #ffffff; /* White outline for focus */ */
+    outline: none; /* Remove outline on focus */
+    /* outline-offset: 2px; */
+    text-decoration: underline; /* Add underline on focus for visibility */
 }
 
 .quote-container {
@@ -135,25 +137,21 @@ a:focus {
 .site-header {
     background-color: #282828; /* Dark background for header */
     padding: 15px 30px; /* Increase padding */
-    /* text-align: center; */ /* Remove text-align from header */
-    /* margin-top: 20px; /* Add top margin */ */
-    /* margin-bottom: 20px; /* Add bottom margin */ */
-    /* max-width: 960px; /* Align with container width */ */
+    text-align: center; /* Center inline and inline-block elements within the header */
+    margin: 20px auto; /* Center the header horizontally and add vertical space */
     width: fit-content; /* Make width fit content */
-    /* display: inline-block; /* Make the header an inline-block element to fit content */ */
+    display: block; /* Ensure it's a block element to center with margin */
     border-radius: 10px; /* More rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
     box-sizing: border-box; /* Include padding in the element's total width */
-    display: flex; /* Use flexbox for centering content */
-    justify-content: center; /* Center content horizontally */
-    margin: 20px auto; /* Center the header horizontally and add vertical space */
 }
 
 .site-header nav {
-    /* display: inline-block; /* Allow the nav to shrink to content width */ */
-    /* text-align: center; /* Center the links within the nav */ */
-    /* Remove these rules as flexbox on header handles centering */
-    /* width: fit-content; /* Make the nav width fit its content */ */
+    /* Remove conflicting styles */
+    /* display: inline-block; */
+    /* text-align: center; */
+    /* width: fit-content; */
+    /* display: block; */
 }
 
 .site-header nav a {
