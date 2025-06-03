@@ -501,4 +501,35 @@ p br {
         top: 14px;
         transform: translateX(-50%) rotate(-45deg);
     }
+}
+
+/* Blog content styles */
+.blog-content {
+    display: flex; /* Arrange children side-by-side */
+    align-items: flex-start; /* Align items to the top */
+    gap: 30px; /* Add space between the image and the paragraph */
+    margin: 20px 0; /* Add vertical margin */
+}
+
+.blog-img {
+    max-width: 40%; /* Adjust size for blog images */
+    height: auto;
+    margin: 0; /* Remove default image margins */
+}
+
+.blog-content p {
+    flex-grow: 1; /* Allow paragraph to take up remaining space */
+    margin: 0; /* Remove default paragraph margins */
+    font-size: 1.1em; /* Slightly larger text for blog content */
+}
+
+@media (max-width: 768px) {
+    .blog-content {
+        flex-direction: column; /* Stack items vertically on mobile */
+    }
+    
+    .blog-img {
+        max-width: 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Add space below image on mobile */
+    }
 } 
