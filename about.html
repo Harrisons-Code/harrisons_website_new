@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>About - Harrison's Website</title>
@@ -5,6 +6,11 @@
     </head>
     <body>
         <header class="site-header">
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -21,5 +27,33 @@
                 <p>Hi, I'm Harrison. I'm a student from the United Kingdom currently in high school studying A-Levels. I enjoy reading, calisthenics, productivity, listening to rock music and self-improvement/development. Hopefully this website is interesting or helpful. :)</p>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector('.hamburger');
+                const nav = document.querySelector('.site-header nav');
+                
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+
+                // Close menu when clicking a link
+                const navLinks = document.querySelectorAll('.site-header nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.site-header') && nav.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        </script>
     </body>
-    </html>
+</html>

@@ -10,6 +10,11 @@
     </head>
     <body>
         <header class="site-header">
+            <button class="hamburger" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -34,7 +39,7 @@
                 <div class="featured-blog">
                     <h2>Latest Blog Post</h2>
                     <article>
-                        <h3><a href="blog-ontheshortnessoflife.html">My Review of the TRUTHEAR GATE IEMs</a></h3>
+                        <h3><a href="blog-TRUTHEARGATE.html">My Review of the TRUTHEAR GATE IEMs</a></h3>
                         <p class="post-meta">Posted 2nd June, 2025</p>
                         <p class="post-excerpt">If you're looking for some good IEMs that won't cost you too much, the Truthear GATE is a great option. At around £20 (~$27), it's hard not to be curious. But are they actually a good pair of IEMs or just a cheap piece of tech that won't deliver?</p>
                         <a href="blog-TRUTHEARGATE.html" class="read-more">Read More →</a>
@@ -54,5 +59,34 @@
         <footer class="site-footer">
             <p>&copy; 2025 Harrison's Website. All rights reserved.</p>
         </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector('.hamburger');
+                const nav = document.querySelector('.site-header nav');
+                
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('active');
+                    nav.classList.toggle('active');
+                });
+
+                // Close menu when clicking a link
+                const navLinks = document.querySelectorAll('.site-header nav a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!event.target.closest('.site-header') && nav.classList.contains('active')) {
+                        hamburger.classList.remove('active');
+                        nav.classList.remove('active');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

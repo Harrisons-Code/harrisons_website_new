@@ -405,4 +405,100 @@ p br {
     margin-top: 40px;
     border-top: 1px solid #333;
     color: #888888;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    position: relative;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #cccccc;
+    position: absolute;
+    left: 50%;
+    transition: all 0.15s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.hamburger span:nth-child(1) {
+    top: 7px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 14px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 21px;
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+
+    .site-header {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .site-header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: #282828;
+        padding: 80px 20px 20px;
+        transition: right 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Faster, snappier transition */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-header nav.active {
+        right: 0;
+    }
+
+    .site-header nav a {
+        margin: 10px 0;
+        font-size: 1.2em;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Snappy hamburger to cross animation */
+    .hamburger.active span:nth-child(1) {
+        top: 14px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
+    }
+
+    .hamburger.active span:nth-child(3) {
+        top: 14px;
+        transform: translateX(-50%) rotate(-45deg);
+    }
 } 
